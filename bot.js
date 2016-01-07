@@ -192,7 +192,7 @@ controller.hears(['Hello','hi'],'direct_message,direct_mention,mention,ambient',
     if (!user) {
        user = {
           id: "noID",
-          name: "Penny"
+          name: "Seda"
        }
     }
 
@@ -211,9 +211,8 @@ controller.hears(['Hello','hi'],'direct_message,direct_mention,mention,ambient',
             } else {
               convo.say("Awesome, I see that you're looking for a rental in Austin, TX with a maximum rent of $" + response.text + ". Here is the first result:");
               convo.say("http://rentals-www-staging.herokuapp.com/search/austin-tx/hyde-park?property_id=7140476068");
+              convo.say(":thumbsup: Okay Seda, I’ve got you all set up. I’ll notify you here with new listings that match your criteria, as soon as they are available. Remember, if you ever need help or want to change or add your search criteria, just type ‘help’.");
               convo.say("To see all results click http://rentals-www-staging.herokuapp.com/search/austin-tx/hyde-park?filters%5Bprice_max%5D=" + response.text);
-              convo.say("...give me a second to save your preferences...");
-              convo.say(":thumbsup: Okay Rey, I’ve got you all set up. I’ll notify you here with new listings that match your criteria, as soon as they are available. Remember, if you ever need help or want to change or add your search criteria, just type ‘help’.");
               convo.next();
             }
           }
